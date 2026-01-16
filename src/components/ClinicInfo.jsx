@@ -82,9 +82,14 @@ const ClinicInfo = () => {
                                 <Calendar size={20} />
                                 Call to Book Your Consultation Now
                             </button>
-                            <p className="text-center text-slate-400 text-sm">
-                                Available Mon-Sat, 10am - 8pm
-                            </p>
+                            <div className="bg-teal-50 rounded-xl p-4 border border-teal-100 text-center">
+                                <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Clinic Hours (Mon - Sat)</p>
+                                <div className="space-y-1">
+                                    <p className="text-slate-800 font-bold text-lg">10:30 AM - 1:30 PM</p>
+                                    <p className="text-teal-600 font-bold text-sm">----- AND -----</p>
+                                    <p className="text-slate-800 font-bold text-lg">4:30 PM - 8:00 PM</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
