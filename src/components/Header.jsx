@@ -40,12 +40,14 @@ const Header = () => {
                         <Mail size={16} fill="currentColor" className="text-white" />
                         <span>radiancehomeocare@gmail.com</span>
                     </div>
-                    <button
-                        onClick={() => navigate('/contact')}
-                        className="bg-[#2A9D84] hover:bg-[#238b73] text-white px-6 py-1.5 rounded uppercase text-xs font-bold tracking-wider transition-colors border border-white/20 shadow-sm"
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSepAcHx0dSjsA8PXwlkfmGr4H0gshq7pyjjSlslu07PRTXSPw/viewform?usp=pp_url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#2A9D84] hover:bg-[#238b73] text-white px-6 py-1.5 rounded uppercase text-xs font-bold tracking-wider transition-colors border border-white/20 shadow-sm no-underline inline-block"
                     >
-                        Book Consultation
-                    </button>
+                        Book Consultation Now
+                    </a>
                 </div>
             </div>
 

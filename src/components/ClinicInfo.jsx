@@ -78,10 +78,15 @@ const ClinicInfo = () => {
                                 </div>
                             </div>
 
-                            <button className="w-full bg-gradient-to-r from-teal-600 to-[#3BBCA0] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSepAcHx0dSjsA8PXwlkfmGr4H0gshq7pyjjSlslu07PRTXSPw/viewform?usp=pp_url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full bg-gradient-to-r from-teal-600 to-[#3BBCA0] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                            >
                                 <Calendar size={20} />
-                                Call to Book Your Consultation Now
-                            </button>
+                                Book Consultation Now
+                            </a>
                             <div className="bg-teal-50 rounded-xl p-4 border border-teal-100 text-center">
                                 <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Clinic Hours (Mon - Sat)</p>
                                 <div className="space-y-1">

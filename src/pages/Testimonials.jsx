@@ -123,25 +123,30 @@ const Testimonials = () => {
             </div>
 
             {/* Carousel Container */}
-            <div className="relative py-4">
+            <div className="relative py-4 group">
                 {/* Gradient masks */}
                 <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-20 pointer-events-none"></div>
                 <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-20 pointer-events-none"></div>
 
+                <style>{`
+                    @keyframes marquee {
+                        0% { transform: translateX(0%); }
+                        100% { transform: translateX(-33.33%); }
+                    }
+                    .animate-marquee {
+                        animation: marquee 50s linear infinite;
+                    }
+                    .group:hover .animate-marquee {
+                        animation-play-state: paused;
+                    }
+                `}</style>
+
                 <div className="flex overflow-hidden">
-                    <motion.div
-                        className="flex py-10 items-center"
-                        animate={{ x: ["0%", "-33.33%"] }}
-                        transition={{
-                            repeat: Infinity,
-                            ease: "linear",
-                            duration: 40
-                        }}
-                    >
+                    <div className="flex py-10 items-center animate-marquee w-[300%]">
                         {duplicatedReviews.map((review, index) => (
                             <ReviewCard key={index} review={review} />
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>

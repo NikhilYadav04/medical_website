@@ -45,12 +45,7 @@ const treatmentCategories = [
         icon: '💇‍♀️',
         items: ['Hair Fall (Alopecia)', 'Premature Greying', 'Dandruff', 'Patchy Hair Loss', 'Weak & Thin Hair']
     },
-    {
-        id: 'eye',
-        title: 'Eye Problems',
-        icon: '👁️',
-        items: ['Allergic Conjunctivitis', 'Recurrent Stye', 'Watery Eyes', 'Eye Strain & Burning', 'Redness & Itching']
-    },
+
     {
         id: 'behavior',
         title: 'Behavior Disorders',
