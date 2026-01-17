@@ -136,6 +136,11 @@ const Testimonials = () => {
                     .animate-marquee {
                         animation: marquee 50s linear infinite;
                     }
+                    @media (max-width: 768px) {
+                        .animate-marquee {
+                            animation-duration: 10s;
+                        }
+                    }
                     .group:hover .animate-marquee {
                         animation-play-state: paused;
                     }

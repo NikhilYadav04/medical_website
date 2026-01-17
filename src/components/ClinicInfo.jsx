@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Calendar, Pill } from 'lucide-react';
+import ConsultationModal from './ConsultationModal';
 
 const ClinicInfo = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 to-teal-50/30 font-sans">
+            <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 rounded-3xl overflow-hidden bg-white shadow-2xl border border-white/50">
                     {/* Map / Visual Side */}
@@ -52,7 +57,6 @@ const ClinicInfo = () => {
                             Experience comprehensive holistic care in our modern facility. We are fully equipped for diagnostics and personalized treatment plans.
                         </p>
 
-                        {/* Online Medication Feature */}
                         {/* Clinic Address Card */}
                         <div className="mb-8 bg-teal-50 border border-teal-100 p-4 rounded-xl flex items-start gap-3">
                             <div className="bg-teal-100 p-2 rounded-lg text-teal-600 shrink-0">
@@ -78,15 +82,13 @@ const ClinicInfo = () => {
                                 </div>
                             </div>
 
-                            <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSepAcHx0dSjsA8PXwlkfmGr4H0gshq7pyjjSlslu07PRTXSPw/viewform?usp=pp_url"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                onClick={() => setIsModalOpen(true)}
                                 className="w-full bg-gradient-to-r from-teal-600 to-[#3BBCA0] text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <Calendar size={20} />
                                 Book Consultation Now
-                            </a>
+                            </button>
                             <div className="bg-teal-50 rounded-xl p-4 border border-teal-100 text-center">
                                 <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Clinic Hours (Mon - Sat)</p>
                                 <div className="space-y-1">
