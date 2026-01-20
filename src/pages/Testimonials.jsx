@@ -77,7 +77,7 @@ const reviews = [
 ];
 
 const ReviewCard = ({ review }) => (
-    <div className="min-w-[450px] md:min-w-[500px] bg-white/10 backdrop-blur-md p-10 rounded-3xl mx-6 text-slate-800 shadow-xl border border-white/20 hover:scale-105 transition-transform duration-300 relative group">
+    <div className="min-w-[300px] md:min-w-[500px] bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-3xl mx-4 md:mx-6 text-slate-800 shadow-xl border border-white/20 hover:scale-105 transition-transform duration-300 relative group">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 rounded-3xl -z-10"></div>
         <div className="absolute top-0 right-0 p-6 opacity-10">
             <Quote size={64} className="text-teal-600" />
@@ -110,7 +110,7 @@ const Testimonials = () => {
     const duplicatedReviews = [...reviews, ...reviews, ...reviews];
 
     return (
-        <div className="min-h-screen pt-40 pb-10 overflow-hidden font-sans bg-slate-50 relative flex flex-col justify-center">
+        <div className="min-h-screen pt-52 md:pt-40 pb-10 overflow-hidden font-sans bg-slate-50 relative flex flex-col justify-center">
             {/* Background decorative blobs */}
             <div className="absolute top-20 left-10 w-72 h-72 bg-teal-200/30 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -138,7 +138,7 @@ const Testimonials = () => {
                     }
                     @media (max-width: 768px) {
                         .animate-marquee {
-                            animation-duration: 10s;
+                            animation-duration: 40s;
                         }
                     }
                     .group:hover .animate-marquee {
@@ -147,7 +147,7 @@ const Testimonials = () => {
                 `}</style>
 
                 <div className="flex overflow-hidden">
-                    <div className="flex py-10 items-center animate-marquee w-[300%]">
+                    <div className="flex py-10 items-center animate-marquee w-max">
                         {duplicatedReviews.map((review, index) => (
                             <ReviewCard key={index} review={review} />
                         ))}

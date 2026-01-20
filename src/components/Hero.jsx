@@ -8,7 +8,7 @@ const Hero = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="min-h-screen pt-44 pb-12 px-4 sm:px-6 lg:px-8 flex items-center bg-gradient-to-br from-slate-100 via-slate-200 to-teal-50 overflow-hidden relative">
+        <section className="min-h-screen pt-52 md:pt-44 pb-12 px-4 sm:px-6 lg:px-8 flex items-center bg-gradient-to-br from-slate-100 via-slate-200 to-teal-50 overflow-hidden relative">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0">
                 <img src={bgImage} alt="" className="w-full h-full object-cover opacity-70 mix-blend-overlay" />

@@ -3,7 +3,7 @@ import { Star, Clock, CheckCircle } from 'lucide-react';
 
 const CaseCard = ({ disease, description, solutionTime, review, rating = 5 }) => {
     return (
-        <div className="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-1 transition-all duration-300 group">
+        <div className="min-w-[280px] md:min-w-[400px] bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-1 transition-all duration-300 group">
             <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors">{disease}</h3>
                 <span className="flex items-center gap-1.5 text-teal-600 font-bold text-xs bg-teal-50 px-3 py-1.5 rounded-full border border-teal-100 uppercase tracking-wide">
